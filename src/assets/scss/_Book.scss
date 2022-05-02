@@ -1,0 +1,39 @@
+.Authorbook {
+  // height: 110vh;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__Samplebook {
+    margin-top: 45px;
+  }
+  // &__Bookdesc {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+  .samplebook {
+    height: 440px;
+  }
+  .Aboutbook {
+    font-size: 20px;
+    line-height: 35px;
+    color: #000;
+  }
+}
+.store.container-fluid {
+  text-align: end;
+  h2.headings {
+    margin: 15px;
+  }
+  img.logos {
+    height: 25px;
+    margin: 10px;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+  }
+  img.logos:hover {
+    opacity: 0.5;
+  }
+}

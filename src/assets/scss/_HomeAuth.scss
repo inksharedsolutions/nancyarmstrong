@@ -1,0 +1,30 @@
+.homeauth {
+  // height: 115vh;
+  background: url("../../../static/wave\ \(1\).svg"),
+    url("../../../static/wavetop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  display: flex;
+  align-items: center;
+  color: #b2b2b2;
+
+  background-color: #323232;
+  &__authorimg {
+    border-radius: 10px;
+  }
+  &__coldesc {
+  }
+  .authordesc {
+    font-weight: 400;
+  }
+}
+.brand {
+  color: white;
+}
+.companyname {
+  color: #b2b2b2;
+}
+h5,
+.stayup {
+  color: #b2b2b2;
+}

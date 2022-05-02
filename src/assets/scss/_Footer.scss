@@ -1,0 +1,63 @@
+.footer {
+  background-color: #323232;
+  padding-top: 20px;
+  &__description {
+    .nancy {
+      color: #b2b2b2;
+      font-size: 20px;
+      line-height: 1.4em;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+  }
+
+  &__navfooter {
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+    a {
+      color: #0d6efd;
+      text-decoration: underline;
+      font-size: 15px;
+      text-decoration: none;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+      display: block;
+      color: #b2b2b2;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #fff;
+  }
+  &__companylogo {
+    .companyname {
+      font-size: 15px;
+    }
+  }
+  &__policies {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    a {
+      padding-left: 15px;
+      text-decoration: none;
+      color: #b2b2b2;
+    }
+    a.tac {
+      padding-left: 0px;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .fa-facebook {
+      color: #b2b2b2;
+    }
+  }
+}
+.nancy {
+  color: #b2b2b2;
+}

@@ -1,0 +1,44 @@
+.contactus.container-fluid.bg-light {
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form.container-fluid {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    padding: 20px;
+    margin-top: 90px;
+  }
+
+  .social.container-fluid.col-lg-6.col-12 {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    .phone {
+      margin: 25px;
+    }
+    .at {
+      margin: 25px;
+    }
+    .location {
+      margin: 25px;
+    }
+  }
+  .header1 {
+    text-align: center;
+    margin: 20px;
+  }
+  textarea#exampleForm\.ControlTextarea1 {
+    resize: none;
+  }
+  .faphone:hover {
+    color: limegreen;
+    cursor: pointer;
+  }
+  .faat:hover {
+    color: red;
+    cursor: pointer;
+  }
+}

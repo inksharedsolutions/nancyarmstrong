@@ -1,0 +1,39 @@
+.main {
+  // background: url("../../../static/bg-18.png");
+  // background-repeat: no-repeat;
+  // background-position: 121%;
+  // background-size: 900px;
+  // object-fit: cover;
+  //   background-attachment: ;
+  // .background {
+  //   background: url("../../../static/bg-18.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: right 20px;
+  // }
+  .house {
+    width: 100%;
+  }
+  .read {
+    font-family: "Playfair Display", serif;
+  }
+  &__textbox {
+    width: min(500px, 70%);
+    .featured {
+      font-size: 90px;
+      line-height: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .book {
+      font-size: 90px;
+      line-height: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+  }
+}
