@@ -3,7 +3,8 @@ module.exports = {
     title: `The Little Red House`,
     description: `This is a story about a little boy who learns that everything that is fun cannot always be found in a toy box, or even in a book.`,
     author: `Nancy Armstrong`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://nancyarmstrong.netlify.app/`,
+    image: `/front-cover.jpg`,
     publishedBy: `Stratton Press Publishing`,
   },
   plugins: [

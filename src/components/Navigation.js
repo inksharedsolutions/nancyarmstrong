@@ -8,10 +8,6 @@ import {
   Nav,
   Container,
   Offcanvas,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
 } from "react-bootstrap"
 import {
   faFacebook,
@@ -31,8 +27,8 @@ const Navigation = () => {
         fixed="top"
       >
         <Container className="m-0" fluid>
-          <Navbar.Brand href="#home" className="navbrand">
-            <img alt="" src={icon} width="50" height="50" />{" "}
+          <Navbar.Brand href="/#home" className="navbrand">
+            <img alt="logo" src={icon} width="50" height="50" />{" "}
             <span className="brand">The Little Red House</span>
           </Navbar.Brand>
 
@@ -66,7 +62,7 @@ const Navigation = () => {
               <Nav className="justify-content-end flex-grow-1 pe-3 mt-2">
                 <Link
                   className="offlink"
-                  to="/"
+                  to="/#home"
                   onClick={() =>
                     setTimeout(() => {
                       setExpanded(false)
@@ -77,29 +73,29 @@ const Navigation = () => {
                 </Link>
                 <Link
                   className="offlink"
-                  to="#author"
+                  to="/#author"
                   onClick={() =>
                     setTimeout(() => {
                       setExpanded(false)
                     }, 500)
                   }
                 >
-                  About the author
+                  Author
                 </Link>
                 <Link
                   className="offlink"
-                  to="#book"
+                  to="/#book"
                   onClick={() =>
                     setTimeout(() => {
                       setExpanded(false)
                     }, 500)
                   }
                 >
-                  About the book
+                  Book
                 </Link>
                 <Link
                   className="offlink"
-                  to="#contact"
+                  to="/#contact"
                   onClick={() =>
                     setTimeout(() => {
                       setExpanded(false)
@@ -110,28 +106,28 @@ const Navigation = () => {
                 </Link>
               </Nav>
               <Nav className="links flex-row mt-4">
-                <Nav.Link href="#home" className="me-4">
+                <Nav.Link href="https://www.facebook.com/StrattonPressInc/" className="me-4">
                   <FontAwesomeIcon
                     icon={faFacebook}
                     size="2x"
                     className="fa-facebook"
                   />
                 </Nav.Link>
-                <Nav.Link href="#features" className="me-4">
+                <Nav.Link href="https://twitter.com/StrattonPress" className="me-4">
                   <FontAwesomeIcon
                     icon={faTwitter}
                     size="2x"
                     className="fa-facebook"
                   />
                 </Nav.Link>
-                <Nav.Link href="#pricing" className="me-4">
+                <Nav.Link href="https://www.instagram.com/strattonpress/" className="me-4">
                   <FontAwesomeIcon
                     icon={faInstagram}
                     size="2x"
                     className="fa-facebook"
                   />
                 </Nav.Link>
-                <Nav.Link href="#pricing" className="me-4">
+                <Nav.Link href="https://www.goodreads.com/book/show/56362404-the-little-red-house" className="me-4">
                   {" "}
                   <FontAwesomeIcon
                     icon={faGoodreads}
@@ -144,7 +140,8 @@ const Navigation = () => {
           </Navbar.Offcanvas>
 
           <Nav className="d-none d-lg-flex d-xl-flex">
-            {/* <Link className="links" to="/">
+             {/*
+             <Link className="links" to="/">
               Home
             </Link>
             <Link className="links" to="#author">
@@ -156,44 +153,43 @@ const Navigation = () => {
             <Link className="links" to="#contact">
               Contact
             </Link> */}
-            <Nav.Link className="links" href="#home">
+            <Nav.Link className="links" href="/#home">
               Home
             </Nav.Link>
-            <Nav.Link className="links" href="#author">
-              About the author
+            <Nav.Link className="links" href="/#author">
+              Author
             </Nav.Link>
-            <Nav.Link className="links" href="#book">
-              About the book
+            <Nav.Link className="links" href="/#book">
+              Book
             </Nav.Link>
-            <Nav.Link className="links" href="#contact">
+            <Nav.Link className="links" href="/#contact">
               Contact
             </Nav.Link>
           </Nav>
 
           <Nav className="d-none d-lg-flex d-xl-flex">
-            <Nav.Link className="logos" href="#home">
+            <Nav.Link className="logos" href="https://www.facebook.com/StrattonPressInc/">
               <FontAwesomeIcon
                 icon={faFacebook}
                 size="2x"
                 className="fa-facebook"
               />
             </Nav.Link>
-            <Nav.Link className="logos" href="#features">
+            <Nav.Link className="logos" href="https://twitter.com/StrattonPress">
               <FontAwesomeIcon
                 icon={faTwitter}
                 size="2x"
                 className="fa-facebook"
               />
             </Nav.Link>
-            <Nav.Link className="logos" href="#pricing">
+            <Nav.Link className="logos" href="https://www.instagram.com/strattonpress/">
               <FontAwesomeIcon
                 icon={faInstagram}
                 size="2x"
                 className="fa-facebook"
               />
             </Nav.Link>
-            <Nav.Link className="logos" href="#pricing">
-              {" "}
+            <Nav.Link className="logos" href="https://www.goodreads.com/book/show/56362404-the-little-red-house">
               <FontAwesomeIcon
                 icon={faGoodreads}
                 size="2x"

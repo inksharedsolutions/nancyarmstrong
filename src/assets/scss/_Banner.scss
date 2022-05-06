@@ -36,4 +36,62 @@
       line-height: 1.4em;
     }
   }
+
+  //non-front-banner
+  .terms-img{
+    width: 95%;
+    margin-inline: auto;
+  }    
+  #nfb_title{
+    margin: auto 0;
+    padding: 0;
+    text-align: center;
+    color: #eee;
+
+    &::after{
+      content: '';
+      width: 50%;
+      height: 86%;
+      background: linear-gradient(to top, #2F2E41, #EA3444);
+      position: absolute;
+      top: -9%;
+      left: -8%;
+      transform: translate(-50%, -50%);
+      border-radius: 30%;
+      z-index: -1;
+      animation: rotation 8s infinite linear;
+    }
+  }
+}
+
+@media screen and (max-width : 999px){
+  #nft{
+    background: linear-gradient(to top, #2F2E41, #EA3444);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #nfb_title{
+      width: 100%;
+      
+      &::after{
+        content: none !important;
+        display: none !important;
+      }
+    }
+    .terms-img{
+      display: none;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

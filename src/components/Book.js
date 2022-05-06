@@ -21,7 +21,10 @@ const Book = () => {
               This is a story about a little boy who learns that everything that
               is fun cannot always be found in a toy box, or even in a book. A
               story about a little red house with no windows, no doors, and a
-              star inside. Jimmy starts out on an adventure that takes him many
+              star inside.
+            </p>
+            <p className="Aboutbook">
+              Jimmy starts out on an adventure that takes him many
               places, meets many people, and learns to trust in others as well
               as himself. This is a wonderful story about the love and trust a
               mother has for her son. Also, a story about always believing in
