@@ -736,8 +736,22 @@
 }
 
 //add
-@media screen and (max-width: 767px){
+@media screen and (max-width: 912px){
+  .formInputs{
+    width: 180%;
+  }
+}
+
+@media screen and (max-width: 768px){
   .nancy{
     text-align: center;
+  }
+
+  .formInputs{
+    width: 120%;
+  }
+
+  .textareaform{
+    width: 89%;
   }
 }

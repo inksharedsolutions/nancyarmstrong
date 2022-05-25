@@ -1,85 +1,105 @@
-import React, { useState } from "react"
-import { Button, Col, Form, Row, InputGroup, Container } from "react-bootstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAt, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
+import React, { useState } from "react";
+import { Button, Col, Form, Row, InputGroup, Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAt, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useForm, ValidationError } from '@formspree/react';
+import Inputs from "../components/Inputs/inputs";
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
+
 
 const Contact = () => {
   const [validated, setValidated] = useState(false)
 
-  const [state, handleSubmit] = useForm("mknkvenn");
-  if (state.succeeded) {
-      return alert("Successfully Sent!");
-  }
+  function OnSubmitForm(e) {
 
-  // const handleSubmit = event => {
-  //   const form = event.currentTarget
-  //   if (form.checkValidity() === false) {
-  //     event.preventDefault()
-  //     event.stopPropagation()
-  //   }
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            form.reset();
+            Swal.fire(
+              'Thank you!',
+              'Email has been sent!',
+              'success'
+            );
+        } else {
+            console.log('something went wrong')
+        } 
+    };
 
-  //   setValidated(true)
-  // }
+    xhr.send(data);
+}
   return (
     <div className="contactus container-fluid bg-light" id="contact">
       <Container fluid>
         <Row>
           <Col xs={12} md={6} lg={6}>
-            <div className="form container-fluid">
-              <h1>Send us an Email!</h1>
-              <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <input type="hidden" name="author" value="Nancy Armstrong" />
-                {/* firstname */}
-                <Form.Group as={Col} controlId="validationCustom01">
-                  <Form.Label></Form.Label>
-                  <Form.Control required type="text" placeholder="Fullname" name="fullname"/>
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
+            
+                    <form
+                            onSubmit={OnSubmitForm}
+                            action="https://formspree.io/f/mbjqoneo"
+                            method="POST">
 
-                {/* lastname */}
-                <Form.Group as={Col} controlId="validationCustom02">
-                  <Form.Label></Form.Label>
-                  <Form.Control required type="text" placeholder="Phone" name="phone"/>
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
+                          <div className="Row">
+                          <h1>Send us an Email!</h1>
+                            <div className="columns" id="form-wrapper">
+                               
+                              <div className="textPadding">
+                                    <input
+                                    type="hidden" 
+                                    name= "author"
+                                    value="Nancy Armstrong"/>
 
-                {/* Email */}
-                <Form.Group as={Col} controlId="validationCustomUsername">
-                  <Form.Label></Form.Label>
-                    
-                    <Form.Control
-                      type="email"
-                      placeholder="Email Address"
-                      aria-describedby="inputGroupPrepend"
-                      required
-                      name="email"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please choose a username.
-                    </Form.Control.Feedback>
-                </Form.Group>
+                                    <Inputs
+                                        name="fullname"
+                                        type="text" />
+                              </div>
+                              <div className="textPadding">
+                                    <Inputs
+                                        name="phone"
+                                        type="text" />
+                              </div>
 
-                {/* address */}
-                <Form.Group as={Col} controlId="validationCustom03">
-                  <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Address" required name="address"/>
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a valid city.
-                  </Form.Control.Feedback>
-                </Form.Group>
+ 
+                                <div className="textPadding">
 
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label></Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="Message" name="message" required/>
-                </Form.Group>
+                                    <Inputs
+                                        name="email"
+                                        type="email" />
+                                </div>
+                                <div className="textPadding">
+                                    <Inputs
+                                        name="address"
+                                        type="text" />
 
-                <Button type="submit" disabled={state.submitting}>Submit</Button>
-              </Form>
-            </div>
+                                </div>
+                            </div>
+                          
+
+                            <div className="columns">
+                                <div className="column is-full" id="textAreaContainer">
+                                    <textarea type="text" name='message'
+                                        className="textareaform"
+                                        placeholder='Message'
+                                        required />
+                                  
+
+                                    <div className="buttonContainer">
+                                        <input
+                                            className="abtiaryButton"
+                                            value="Submit"
+                                            type="submit" />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
           </Col>
 
           <Col className="social container-fluid" xs={12} md={6} lg={6}>
